@@ -1,0 +1,44 @@
+# Node dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Production build outputs
+dist/
+frontend/dist/
+dist-ssr/
+frontend/dist-ssr/
+
+# Environment files and credentials (CRITICAL SEED/SECRET EXCLUSION)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+backend/.env.local
+frontend/.env
+frontend/.env.local
+
+# Stack dumps and logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.stackdump
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor / IDE configuration
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

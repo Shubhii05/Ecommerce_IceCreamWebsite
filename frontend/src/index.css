@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Chewy&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans;
+    background-color: hsl(40, 60%, 97%);
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom scrollbar to look premium */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(40, 60%, 97%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(340, 40%, 85%);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(340, 65%, 75%);
+}
+
+/* Elegant soft 2D typography style */
+.retro-sticker-shadow {
+  font-family: 'Chewy', cursive;
+  text-shadow: 
+    2px 2px 0px hsl(340, 65%, 85%), 
+    4px 4px 10px rgba(80, 20, 10, 0.1);
+}
+
+.retro-sticker-shadow-green {
+  font-family: 'Chewy', cursive;
+  text-shadow: 
+    2px 2px 0px hsl(165, 40%, 85%), 
+    4px 4px 10px rgba(80, 20, 10, 0.1);
+}
+
+/* Elegant and clean 2D Sticker Typography */
+.retro-title-sticker-brown {
+  font-family: 'Pacifico', cursive;
+  font-style: italic;
+  color: #6b5344; /* Warm earthy brown */
+  text-shadow: 2px 2px 0px rgba(225, 77, 118, 0.18); /* Elegant rose accent shadow */
+}
+
+.retro-title-sticker-rose {
+  font-family: 'Pacifico', cursive;
+  color: #e14d76; /* Soft, warm rose face */
+  text-shadow: 2px 2px 0px rgba(44, 30, 27, 0.12); /* Subtle espresso shadow */
+}
+
+.retro-title-sticker-brown-pacifico {
+  font-family: 'Pacifico', cursive;
+  font-style: italic;
+  color: #6b5344; /* Warm earthy brown */
+  text-shadow: 2px 2px 0px rgba(225, 77, 118, 0.18); /* Elegant rose accent shadow */
+}
+
+.retro-title-sticker-green {
+  font-family: 'Chewy', cursive;
+  color: #40916c; /* Rich elegant sage green */
+  text-shadow: 2px 2px 0px rgba(225, 77, 118, 0.15); /* Soft rose shadow accent */
+}
+
+.retro-title-sticker-yellow {
+  font-family: 'Chewy', cursive;
+  color: #d97706; /* Deep honey amber face */
+  text-shadow: 2px 2px 0px rgba(44, 30, 27, 0.12); /* Subtle espresso shadow */
+}
+
+.font-chewy {
+  font-family: 'Chewy', cursive;
+}
+
+.font-pacifico {
+  font-family: 'Pacifico', cursive;
+}
+
+.hero-center-stage {
+  width: 420px;
+  height: 520px;
+}
+
+.hero-main-icecream {
+  width: 400px;
+  height: 650px;
+  bottom: -120px;
+}
+
+@media (max-width: 768px) {
+  .scoops-hero {
+    border-width: 22px !important;
+    margin-top: 64px !important;
+    padding-top: 28px !important;
+  }
+
+  .scoops-hero h1 span {
+    font-size: clamp(3rem, 14vw, 3.75rem) !important;
+    line-height: 0.98;
+  }
+
+  .hero-center-stage {
+    width: min(88vw, 350px);
+    height: min(116vw, 460px);
+    margin-top: 8px;
+    margin-bottom: 106px;
+  }
+
+  .hero-arch-bg {
+    width: min(70vw, 278px);
+    height: min(112vw, 450px);
+  }
+
+  .hero-arch-text {
+    width: min(86vw, 340px);
+    height: min(106vw, 420px);
+    bottom: -54px !important;
+  }
+
+  .hero-main-icecream {
+    width: min(92vw, 350px) !important;
+    height: min(142vw, 540px) !important;
+    bottom: -98px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .scoops-hero {
+    border-width: 16px !important;
+    padding-top: 20px !important;
+  }
+
+  .hero-center-stage {
+    width: min(90vw, 330px);
+    height: min(114vw, 430px);
+    margin-bottom: 100px;
+  }
+
+  .scoops-hero h1 span {
+    font-size: clamp(2.75rem, 13vw, 3.15rem) !important;
+  }
+
+  .hero-main-icecream {
+    width: min(94vw, 330px) !important;
+    height: min(146vw, 510px) !important;
+    bottom: -90px !important;
+  }
+}

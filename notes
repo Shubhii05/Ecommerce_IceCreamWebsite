@@ -1,0 +1,49 @@
+Frontend sends request
+        ↓
+index.js (server)
+        ↓
+routes/auth.js
+        ↓
+authController.js
+        ↓
+DB (PostgreSQL)
+        ↓
+Response sent back
+
+
+Protected Route Flow
+
+
+Request with token
+        ↓
+authMiddleware
+        ↓
+Token verified
+        ↓
+Access granted
+
+User adds items → Redis cart
+        ↓
+User clicks checkout
+        ↓
+Create Order in DB
+        ↓
+Create Razorpay order
+        ↓
+User pays (test mode)
+        ↓
+Verify payment
+        ↓
+Mark order as PAID + clear cart
+
+Guest User
+   ↓
+localStorage Cart
+
+Logged-in User
+   ↓
+Frontend CartContext
+   ↓ API Calls
+Backend Cart Routes
+   ↓
+Redis

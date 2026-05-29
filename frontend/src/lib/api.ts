@@ -7,7 +7,9 @@ type ApiOptions = RequestInit & {
 export async function apiFetch<T>(path: string, options: ApiOptions = {}): Promise<T> {
   const { auth = false, headers, ...init } = options;
   const token = auth ? localStorage.getItem("scoops_token") : null;
-  const url = `${API_BASE_URL}${path}`;
+  const baseUrl = API_BASE_URL.endsWith("/") ? API_BASE_URL.slice(0, -1) : API_BASE_URL;
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+  const url = `${baseUrl}${cleanPath}`;
 
   const response = await fetch(url, {
     ...init,
